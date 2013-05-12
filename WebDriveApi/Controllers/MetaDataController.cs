@@ -29,7 +29,11 @@ namespace WebDriveApi.Controllers
         // POST api/metadata
         public void Post(Document document)
         {
-            _repository.Save(document);
+            var documentToUpdate = _repository.Get(document.FullName);
+
+//            _repository.Save(document);
+
+            
         }
 
         // PUT api/metadata/5
